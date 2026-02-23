@@ -176,13 +176,83 @@ body {
 
 /* TRABAJOS */
 
-.trabajo-img {
-    border-radius: 15px;
-    transition: transform 0.3s ease;
+/* === BOTON OUTLINE (para Instagram) === */
+.btn-outline-joy{
+  border: 2px solid var(--violeta);
+  color: var(--violeta);
+  background: transparent;
+  padding: 14px 30px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: 0.25s ease;
+  text-decoration: none;
 }
 
-.trabajo-img:hover {
-    transform: scale(1.05);
+.btn-outline-joy:hover{
+  background: var(--violeta);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* === RECURSOS === */
+.recurso-card{
+  background:#fff;
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+
+.recurso-carousel img{
+  height: 360px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px){
+  .recurso-carousel img{ height: 280px; }
+}
+
+.recurso-body{
+  padding: 22px 22px 26px;
+}
+
+.recurso-tag{
+  display:inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(123,44,191,0.12);
+  color: var(--violeta);
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+
+.recurso-title{
+  color: var(--violeta-oscuro);
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.recurso-text{
+  color: #5b2a86;
+  line-height: 1.6;
+}
+
+/* Reel embed prolijo */
+.recurso-video{
+  background: #faf7ff;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding: 12px;
+}
+
+.recurso-video .instagram-media{
+  width: 100% !important;
+  max-width: 540px !important;
+  border-radius: 16px !important;
+  overflow: hidden;
 }
 
 /* CTA FINAL */
@@ -286,4 +356,26 @@ footer a:hover {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+}
+
+/* TRABAJOS - Reels */
+.reel-card{
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  padding: 14px;
+  overflow: hidden;
+}
+
+/* centra el embed y evita que quede raro */
+.reel-embed{
+  display: flex;
+  justify-content: center;
+}
+
+/* Instagram mete inline styles con max-width:540px; así que esto ayuda a que quede prolijo */
+.reel-card .instagram-media{
+  margin: 0 !important;
+  width: 100% !important;
+  max-width: 540px !important;
 }
