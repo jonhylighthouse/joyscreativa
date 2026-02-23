@@ -1,0 +1,289 @@
+:root {
+    --violeta: #7B2CBF;
+    --violeta-oscuro: #240046;
+    --fucsia: #FF2E92;
+    --gris: #555;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #6A0DAD;
+    scroll-behavior: smooth;
+}
+
+.logo-nav img {
+    height: 48px;
+    transition: transform 0.3s ease;
+}
+
+.logo-nav img:hover {
+    transform: scale(1.05);
+}
+
+/* NAV LINKS (violeta) */
+.navbar .nav-link {
+    color: #6A0DAD !important;
+    font-weight: 500;
+}
+.navbar .nav-link:hover {
+    color: var(--fucsia) !important;
+}
+
+/* NAV SOCIAL ICONS */
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botoncitos estilo "borde violeta + fondo blanco" */
+.nav-icon {
+    width: 34px;
+    height: 34px;
+    background: #fff;
+    border: 2px solid #6A0DAD;
+    border-radius: 12px; /* redondeado como Joy */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6A0DAD;
+    text-decoration: none;
+    transition: 0.25s ease;
+}
+
+/* icono instagram */
+.nav-icon i {
+    font-size: 18px;
+    line-height: 1;
+}
+
+/* icono whatsapp (svg inline) */
+.nav-icon svg {
+    width: 18px;
+    height: 18px;
+    display: block;
+    color: currentColor;
+}
+
+/* hover: borde + icono fucsia */
+.nav-icon:hover {
+    border-color: var(--fucsia);
+    color: var(--fucsia);
+    transform: translateY(-1px);
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #7B2CBF, #FF2E92);
+    color: white;
+    padding-top: 80px;
+}
+
+/* Titulo: blanco (aunque haya spans) */
+.hero-title {
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+.hero-title span {
+    color: #fff;
+}
+
+/* BOTON CTA */
+.btn-joy {
+    background-color: #6A0DAD;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: none;
+    transition: 0.3s ease;
+}
+.btn-joy:hover {
+    background-color: #520a8a;
+    transform: translateY(-2px);
+}
+
+/* WRAPPER: sin borde visible */
+.card-wrapper {
+    position: relative;
+    border-radius: 22px;
+}
+
+/* El borde animado (invisible por defecto) */
+.card-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: -3px;                /* grosor del borde */
+    border-radius: 22px;
+    background: linear-gradient(
+        270deg,
+        #7B2CBF,
+        #FF2E92,
+        #FF8C42,
+        #7B2CBF
+    );
+    background-size: 400% 400%;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+    z-index: 0;
+}
+
+/* CARD: siempre arriba del borde */
+.service-card {
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 32px;
+    border-radius: 20px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    transition: transform 0.3s ease;
+}
+
+/* Hover: aparece el borde + animación */
+.card-wrapper:hover::before {
+    opacity: 1;
+    animation: gradientMove 4s ease infinite;
+}
+
+.card-wrapper:hover .service-card {
+    transform: translateY(-5px);
+}
+
+/* Animación (igual que la foto) */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Iconos */
+.service-card i {
+    font-size: 2rem;
+    color: var(--violeta);
+    transition: color 0.3s ease;
+}
+
+.card-wrapper:hover .service-card i {
+    color: var(--fucsia);
+}
+
+/* TRABAJOS */
+
+.trabajo-img {
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+}
+
+.trabajo-img:hover {
+    transform: scale(1.05);
+}
+
+/* CTA FINAL */
+.cta-instagram {
+    background: linear-gradient(135deg, #6A0DAD, #E91E63);
+    padding: 80px 20px;
+    text-align: center;
+    color: #fff;
+}
+.btn-instagram {
+    background: #fff;
+    color: #6A0DAD;
+    padding: 14px 30px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+.btn-instagram:hover {
+    background: #f3f3f3;
+}
+
+/* FOOTER */
+footer a {
+    color: var(--violeta);
+    text-decoration: none;
+}
+footer a:hover {
+    color: var(--fucsia);
+}
+
+/* WhatsApp flotante (solo ícono) */
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    transition: 0.3s ease;
+}
+.whatsapp-float img {
+    width: 45px;
+    height: 45px;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+.section-light {
+    color: #6A0DAD;
+}
+
+.foto-wrapper {
+    width: 240px;   
+    height: 240px;
+    margin: 0 auto;
+    padding: 6px;   
+    border-radius: 50%;
+
+    background: linear-gradient(
+        270deg,
+        #7B2CBF,
+        #FF2E92,
+        #FF8C42,
+        #7B2CBF
+    );
+
+    background-size: 400% 400%;
+    animation: gradientMove 8s ease infinite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* La animación va AFUERA */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    .foto-wrapper {
+        width: 180px;
+        height: 180px;
+        margin-top: 30px;
+    }
+}
+
+.foto-sobre {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
