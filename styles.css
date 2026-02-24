@@ -112,6 +112,9 @@ body {
 .card-wrapper {
     position: relative;
     border-radius: 22px;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
 
 /* El borde animado (invisible por defecto) */
@@ -144,6 +147,7 @@ body {
     height: 100%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.06);
     transition: transform 0.3s ease;
+    width: 100%;
 }
 
 /* Hover: aparece el borde + animación */
@@ -379,3 +383,4 @@ footer a:hover {
   width: 100% !important;
   max-width: 540px !important;
 }
+
