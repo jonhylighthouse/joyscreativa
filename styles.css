@@ -384,3 +384,42 @@ footer a:hover {
   max-width: 540px !important;
 }
 
+/* ============================= */
+/* SERVICIOS - CORTE LATERAL */
+/* ============================= */
+
+#servicios {
+    position: relative;
+    background: linear-gradient(
+        135deg,
+        var(--violeta) 50%,
+        #ffffff 35%
+    );
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+/* Ajuste para que las cards respiren */
+#servicios .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Título blanco si cae sobre violeta */
+#servicios h2 {
+    color: #fff;
+}
+
+/* En mobile que no quede raro el corte */
+@media (max-width: 768px) {
+    #servicios {
+        background: var(--violeta);
+    }
+
+    #servicios h2 {
+        color: #fff;
+    }
+}
+
+
+
