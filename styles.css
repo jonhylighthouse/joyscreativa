@@ -88,7 +88,7 @@ body {
   position: relative;
   overflow: hidden;
   height: 100vh;
-  background: linear-gradient(135deg, #7B2CBF, #FF2E92);
+  background: linear-gradient(135deg, #7f1878);
   color: #fff;
   padding-top: 80px;
 }
@@ -482,6 +482,7 @@ footer a:hover {
         color: #fff;
     }
 }
+
 
 
 
