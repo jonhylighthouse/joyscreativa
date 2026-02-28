@@ -1,5 +1,5 @@
 :root {
-    --violeta: #7B2CBF;
+    --violeta: #7f1878;
     --violeta-oscuro: #240046;
     --fucsia: #FF2E92;
     --gris: #555;
@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #6A0DAD;
+    color: #7f1878;
     scroll-behavior: smooth;
 }
 
@@ -23,7 +23,7 @@ body {
 
 /* NAV LINKS (violeta) */
 .navbar .nav-link {
-    color: #6A0DAD !important;
+    color: #7f1878 !important;
     font-weight: 500;
 }
 .navbar .nav-link:hover {
@@ -42,12 +42,12 @@ body {
     width: 34px;
     height: 34px;
     background: #fff;
-    border: 2px solid #6A0DAD;
+    border: 2px solid #7f1878;
     border-radius: 12px; /* redondeado como Joy */
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #6A0DAD;
+    color: #7f1878;
     text-decoration: none;
     transition: 0.25s ease;
 }
@@ -76,7 +76,7 @@ body {
 /* HERO */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #7B2CBF, #FF2E92);
+    background: linear-gradient(135deg, #7f1878);
     color: white;
     padding-top: 80px;
 }
@@ -94,7 +94,7 @@ body {
 
 /* BOTON CTA */
 .btn-joy {
-    background-color: #6A0DAD;
+    background-color: #7f1878;
     color: #fff;
     padding: 14px 32px;
     border-radius: 12px;
@@ -105,8 +105,9 @@ body {
     transition: 0.3s ease;
 }
 .btn-joy:hover {
-    background-color: #520a8a;
+    background-color: #7f1878;
     transform: translateY(-2px);
+    color: #fff;
 }
 
 /* WRAPPER: sin borde visible */
@@ -125,11 +126,11 @@ body {
     inset: -3px;                /* grosor del borde */
     border-radius: 22px;
     background: linear-gradient(
-        270deg,
-        #7B2CBF,
-        #FF2E92,
-        #FF8C42,
-        #7B2CBF
+        270deg, 
+        #ed2c70,
+        #7f1878,
+        #f85f29,
+        #fcb130
     );
     background-size: 400% 400%;
     opacity: 0;
@@ -240,7 +241,7 @@ body {
 }
 
 .recurso-text{
-  color: #5b2a86;
+  color: #7f1878;
   line-height: 1.6;
 }
 
@@ -262,14 +263,14 @@ body {
 
 /* CTA FINAL */
 .cta-instagram {
-    background: linear-gradient(135deg, #6A0DAD, #E91E63);
+    background: linear-gradient(135deg, #7f1878);
     padding: 80px 20px;
     text-align: center;
     color: #fff;
 }
 .btn-instagram {
     background: #fff;
-    color: #6A0DAD;
+    color: #7f1878;
     padding: 14px 30px;
     border-radius: 12px;
     font-weight: 700;
@@ -309,7 +310,7 @@ footer a:hover {
 }
 
 .section-light {
-    color: #6A0DAD;
+    color: #7f1878;
 }
 
 .foto-wrapper {
@@ -321,10 +322,10 @@ footer a:hover {
 
     background: linear-gradient(
         270deg,
-        #7B2CBF,
-        #FF2E92,
-        #FF8C42,
-        #7B2CBF
+        #ed2c70,
+        #7f1878,
+        #f85f29,
+        #fcb130
     );
 
     background-size: 400% 400%;
@@ -393,8 +394,7 @@ footer a:hover {
     position: relative;
     background: linear-gradient(
         135deg,
-        var(--violeta) 50%,
-        #ffffff 35%
+        #7f1878,
     );
     padding-top: 100px;
     padding-bottom: 100px;
@@ -421,6 +421,7 @@ footer a:hover {
         color: #fff;
     }
 }
+
 
 
 
