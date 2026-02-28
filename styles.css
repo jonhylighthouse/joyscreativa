@@ -81,6 +81,67 @@ body {
     padding-top: 80px;
 }
 
+/* =========================
+   HERO con logos repetidos
+========================= */
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: linear-gradient(135deg, #7B2CBF, #FF2E92);
+  color: #fff;
+  padding-top: 80px;
+}
+
+/* Asegura que el contenido quede arriba */
+.hero > .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Capa de logos */
+.hero-logos {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Estilo base de cada logo */
+.hero-logo {
+  position: absolute;
+  width: 140px;         /* tamaño base */
+  opacity: 0.16;        /* “marca de agua” */
+  filter: saturate(0.95);
+  transform: translate(-50%, -50%);
+  border-radius: 999px;
+}
+
+/* Posiciones (tipo patrón “Instagram”) */
+.hero-logo.l1 { top: 12%; left: 10%; width: 120px; }
+.hero-logo.l2 { top: 8%;  left: 52%; width: 220px; opacity: 0.12; }
+.hero-logo.l3 { top: 18%; left: 86%; width: 170px; }
+.hero-logo.l4 { top: 52%; left: 12%; width: 180px; opacity: 0.13; }
+.hero-logo.l5 { top: 58%; left: 78%; width: 130px; }
+.hero-logo.l6 { top: 78%; left: 55%; width: 95px;  opacity: 0.18; }
+.hero-logo.l7 { top: 86%; left: 18%; width: 210px; opacity: 0.11; }
+.hero-logo.l8 { top: 92%; left: 88%; width: 240px; opacity: 0.10; }
+
+/* Latido suave */
+@keyframes pulseSoft {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%      { transform: translate(-50%, -50%) scale(1.06); }
+}
+.pulse {
+  animation: pulseSoft 3.6s ease-in-out infinite;
+}
+
+/* Responsive: achicar logos en mobile */
+@media (max-width: 768px) {
+  .hero-logo { width: 110px; opacity: 0.14; }
+  .hero-logo.l2, .hero-logo.l7, .hero-logo.l8 { display: none; } /* opcional */
+}
+
 /* Titulo: blanco (aunque haya spans) */
 .hero-title {
     color: #fff;
@@ -389,15 +450,15 @@ footer a:hover {
 /* ============================= */
 /* SERVICIOS - CORTE LATERAL */
 /* ============================= */
-
 #servicios {
     position: relative;
+    padding: 100px 0;
+
     background: linear-gradient(
         135deg,
-        #7f1878,
+        #7f1878 60%,
+        #ffffff 60%
     );
-    padding-top: 100px;
-    padding-bottom: 100px;
 }
 
 /* Ajuste para que las cards respiren */
@@ -421,6 +482,7 @@ footer a:hover {
         color: #fff;
     }
 }
+
 
 
 
