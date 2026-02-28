@@ -456,8 +456,8 @@ footer a:hover {
 
     background: linear-gradient(
         135deg,
-        #7f1878 60%,
-        #ffffff 60%
+        #7f1878 50%,
+        #ffffff 50%
     );
 }
 
@@ -482,6 +482,7 @@ footer a:hover {
         color: #fff;
     }
 }
+
 
 
 
