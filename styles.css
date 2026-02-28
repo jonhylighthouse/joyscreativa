@@ -155,7 +155,7 @@ body {
 
 /* BOTON CTA */
 .btn-joy {
-    background-color: #7f1878;
+    background-color: #bd07ae;
     color: #fff;
     padding: 14px 32px;
     border-radius: 12px;
@@ -166,7 +166,7 @@ body {
     transition: 0.3s ease;
 }
 .btn-joy:hover {
-    background-color: #7f1878;
+    background-color: #bd07ae;
     transform: translateY(-2px);
     color: #fff;
 }
@@ -456,8 +456,8 @@ footer a:hover {
 
     background: linear-gradient(
         135deg,
-        #7f1878 50%,
-        #ffffff 50%
+        #7f1878 35%,
+        #ffffff 35%
     );
 }
 
@@ -482,6 +482,7 @@ footer a:hover {
         color: #fff;
     }
 }
+
 
 
 
